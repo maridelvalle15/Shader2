@@ -55,6 +55,49 @@ vec4 HSVtoRGB( float h, float s, float v ){
    
 }
 
+//Spirograph Curves
+float LCM(float R,float rv){
+	float i=0;
+	float cm=1.0;
+	if (fmod(R,rv)==0){
+		cm = 1;
+	}
+	else{
+		i=1;
+		while (fmod(R*i,rv)!=0){
+			i=i+1;
+		}
+		cm = i;
+	}
+	return cm;
+}
+
+float calcspiro(float R,float rv, float b, float a){
+	float rho;
+	rho = (sqrt((R-rv)*(R-rv)+b*b+2*(R-rv)*b*cos((1+R/rv)*a)));
+	return rho;
+} // calcspiro()
+
+vec4 spirofield(float R=10, float rv=5, float b=2.5, float hoff=0.0,
+				float freq=1.0, float calctype=0, float f=1.0){
+	float i;
+	float theta;
+	float rho;
+	float nrev;
+	float a;
+	float rsp;
+	float ss;
+	float tt;
+
+	ss=s-0.5;
+	tt=t-0.5;
+	theta=atan(tt,ss);
+	theta += 3.1415;
+	rho = 2*sqrt(ss*ss+tt*tt);
+	if ((rho>((R-rv+b)/R))||(rho<((R-rv-b)/R))){
+		
+	}
+}
 
 
 void main(void) {
