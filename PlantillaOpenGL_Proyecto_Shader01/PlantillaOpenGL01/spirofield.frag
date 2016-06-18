@@ -89,15 +89,60 @@ vec4 spirofield(float R=10, float rv=5, float b=2.5, float hoff=0.0,
 	float ss;
 	float tt;
 
-	ss=s-0.5;
-	tt=t-0.5;
+	ss="gl_TexCoord[0].s-0.5;
+	tt="gl_TexCoord[0].t-0.5;
 	theta=atan(tt,ss);
 	theta += 3.1415;
 	rho = 2*sqrt(ss*ss+tt*tt);
 	if ((rho>((R-rv+b)/R))||(rho<((R-rv-b)/R))){
-		
+		Ci = 0.25;
 	}
-}
+	else{
+		float deltad;
+		vec4 Ch, Cg;
+
+		nrev = LCM(R,v);
+		if (0==calctype){
+			float maxdist;
+			maxdist = -2;
+			for(i=0;i<nrev;i+1){
+				a = theta+)i)*2*Pi;
+				rsp = calcspiro(R,rv,b,a)/R;
+				deltad = abs(rsp-rho);
+				if(delta>maxdist) 
+					maxdist=deltad;
+			}
+		}
+		else if (1==calctype){
+			float mindist;
+			mindist = 2;
+			for(i=0;i<nrev;i+1){
+				a = theta + (i)*2*Pi;
+				rsp = calcspiro(R,rv,b,a)/R;
+				deltad = abs(rsp-rho);
+				if (deltad<mindist)
+					mindist = deltad;
+			}
+			mindist *= (nrev*freq);
+			mindist = fmod((mindist+hoff),1.0);
+			Ch = vec4 hsv(mindist,1,1);
+			Cg = vec4 (mindist,mindist,mindist);
+		}
+		else{
+			float avdist=0;
+			for(i=0;i<nrev;i+1){
+				a = theta + (i)*2*Pi;
+				rsp = calcspiro(R,rv,b,a)/R;
+				avdist += abs(rsp-rho);
+			}
+			avdist *= freq;
+			avdist = fmod((avdist+hoff),1.0);
+			Ch = vec4 hsv(avdist,1,1);
+			Cg = vec4(avdist,avdist,avdist);
+		}
+		Ci = mix(Cg,Ch,f);
+	}
+} // spirofield()
 
 
 void main(void) {

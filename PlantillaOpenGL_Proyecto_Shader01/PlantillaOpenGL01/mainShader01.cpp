@@ -29,8 +29,6 @@ cwc::glShaderManager SM;
 cwc::glShader *shader01;
 cwc::glShader *shader02;
 
-
-
 void ejesCoordenada() {
 	
 	glDisable(GL_LIGHTING);	
@@ -150,7 +148,7 @@ void Keyboard(unsigned char key, int x, int y)
 	default:
 		break;
   }
-
+  scene_list = 0;
   glutPostRedisplay();
 }
 
