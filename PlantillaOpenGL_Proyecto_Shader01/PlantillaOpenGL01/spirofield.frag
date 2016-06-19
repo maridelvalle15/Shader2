@@ -1,3 +1,13 @@
+// Nabil J. Márquez   -  11-10683
+// Marisela del Valle -  11-10267
+// Proyecto VII - Computacion Grafica I
+// Profesor: Eduardo Roa
+// Ultima modificacion:  18/06/16
+
+#include <math.h> 
+
+uniform float _R,_b,_hoff,_freq,_calctype,_f;
+
 vec4 HSVtoRGB( float h, float s, float v ){
    int i;
    float f, p, q, t;
@@ -78,7 +88,7 @@ float calcspiro(float R,float rv, float b, float a){
 	return rho;
 } // calcspiro()
 
-vec4 spirofield(float R=10, float rv=5, float b=2.5, float hoff=0.0,
+vec4 spirofield(float R=10, float rv=5, float b=5, float hoff=0.0,
 				float freq=1.0, float calctype=0, float f=1.0){
 	float i;
 	float theta;
@@ -147,6 +157,8 @@ vec4 spirofield(float R=10, float rv=5, float b=2.5, float hoff=0.0,
 
 void main(void) {
 
-
+	vec4 spirofield;
 	gl_FragColor = HSVtoRGB(0.0,1.0,1.0);
+	spirofield = spirofield(_R,_rv,_b,_hoff,_freq,_calctype,_f);
+
 }

@@ -29,6 +29,8 @@ cwc::glShaderManager SM;
 cwc::glShader *shader01;
 cwc::glShader *shader02;
 
+GLfloat R, b, hoff, freq, calctype, f;
+
 void ejesCoordenada() {
 	
 	glDisable(GL_LIGHTING);	
@@ -98,6 +100,14 @@ void init(){
    shader02 = SM.loadfromFile("spirofield.vert","spirofield.frag"); // load (and compile, link) from file
   		  if (shader02==0) 
 			  std::cout << "Error Loading, compiling or linking shader\n";
+	R = 6.5;
+	b = 5;
+	hoff = 1.9;
+	freq = 0.75;
+	calctype = 1;
+	f = 1;
+
+
 
 }
 
@@ -108,7 +118,7 @@ void cargar_shader(int idx) {
 	if (idx == 0){	
 			if (shader01) shader01->begin();
 
-			//Colocar aqui los parametros Uniform
+			
 
 	}
 
@@ -116,7 +126,12 @@ void cargar_shader(int idx) {
 	if (idx == 1){		
 		   if (shader02) shader02->begin();
 
-		   //Colocar aqui los parametros Uniform
+		   shader02->setUniform1f("_R", R);
+			shader02->setUniform1f("_b", b);
+			shader02->setUniform1f("_hoff",hoff);
+			shader02->setUniform1f("_freq",freq);
+			shader02->setUniform1f("_calctype",calctype);
+			shader02->setUniform1f("_f",f);
 	}
 
 
@@ -144,7 +159,42 @@ void Keyboard(unsigned char key, int x, int y)
 
   switch (key)
   {
-	
+	// Teclas Spirograph
+	case 'Q':
+	case 'q':
+		calctype = 0;
+	case 'A':
+	case 'a':
+		calctype = 1;
+	case 'Z':
+	case 'z':
+		calctype = 2;
+	case 'W':
+	case 'w':
+		R += 1;
+	case 'E':
+	case 'e':
+		R -= 1;
+	case 'S':
+	case 's':
+		freq += 0.05;
+	case 'D':
+	case 'd':
+		freq -= 0.05;
+	case 'X':
+	case 'x':
+		hoff += 1;
+	case 'C':
+	case 'c':
+		hoff -= 1;
+	case 'R':
+	case 'r':
+		f += 0.05;
+	case 'T':
+	case 't':
+		f -= 0.05;
+
+
 	default:
 		break;
   }
