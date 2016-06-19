@@ -1,3 +1,9 @@
+// Nabil J. Márquez   -  11-10683
+// Marisela del Valle -  11-10267
+// Proyecto VII - Computacion Grafica I
+// Profesor: Eduardo Roa
+// Ultima modificacion:  19/06/16
+
 uniform float _xc, _yc, _sz, _escape, _maxiter, _huefreq;
 
 vec4 HSVtoRGB( float h, float s, float v ){
@@ -56,7 +62,6 @@ vec4 HSVtoRGB( float h, float s, float v ){
    return RGB;
    
 }
-
 
 vec4 mandel(float xc, float yc, float sz, float escape, float maxiter, float huefreq) {
 	float xmin, ymin, x, y, a, b, n, aa, bb, twoab, h;

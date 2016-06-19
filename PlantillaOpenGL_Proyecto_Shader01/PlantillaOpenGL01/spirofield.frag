@@ -1,3 +1,10 @@
+// Nabil J. Márquez   -  11-10683
+// Marisela del Valle -  11-10267
+// Proyecto VII - Computacion Grafica I
+// Profesor: Eduardo Roa
+// Ultima modificacion:  19/06/16
+
+
 uniform float _R, _b, _hoff, _rv, _freq, _calctype, _f, _PI;
 
 vec4 HSVtoRGB( float h, float s, float v ){

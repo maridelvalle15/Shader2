@@ -1,37 +1,46 @@
-﻿Build started 19/6/2016 12:49:21 a. m..
+﻿Build started 19/6/2016 1:50:27 a. m..
      1>Project "C:\Users\nabil\Desktop\Graficas6\Shader2\PlantillaOpenGL_Proyecto_Shader01\PlantillaOpenGL01\PlantillaOpenGL01.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\dev\Assimp\include /IC:\dev\opengl\freeglut\include /I"C:\dev\opengl\glew-1.7.0\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt mainShader01.cpp
          mainShader01.cpp
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(40): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(55): warning C4101: 'aspectratio' : unreferenced local variable
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(197): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(202): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(212): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(217): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(222): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(227): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(240): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(241): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(266): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(267): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(279): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(280): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(283): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(285): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(286): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(292): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(293): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(296): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(297): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(298): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(299): warning C4305: '=' : truncation from 'double' to 'float'
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(374): warning C4101: 'zLocal' : unreferenced local variable
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(374): warning C4101: 'xExtent' : unreferenced local variable
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(375): warning C4101: 'loopX' : unreferenced local variable
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(374): warning C4101: 'xLocal' : unreferenced local variable
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(375): warning C4101: 'loopZ' : unreferenced local variable
-     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(374): warning C4101: 'zExtent' : unreferenced local variable
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(46): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(61): warning C4101: 'aspectratio' : unreferenced local variable
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(203): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(208): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(213): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(218): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(223): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(228): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(233): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(234): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(238): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(239): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(243): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(247): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(251): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(255): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(276): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(289): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(290): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(315): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(316): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(328): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(329): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(332): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(334): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(335): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(341): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(342): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(345): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(346): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(347): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(348): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(423): warning C4101: 'zLocal' : unreferenced local variable
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(423): warning C4101: 'xExtent' : unreferenced local variable
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(424): warning C4101: 'loopX' : unreferenced local variable
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(423): warning C4101: 'xLocal' : unreferenced local variable
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(424): warning C4101: 'loopZ' : unreferenced local variable
+     1>c:\users\nabil\desktop\graficas6\shader2\plantillaopengl_proyecto_shader01\plantillaopengl01\mainshader01.cpp(423): warning C4101: 'zExtent' : unreferenced local variable
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\nabil\Desktop\Graficas6\Shader2\PlantillaOpenGL_Proyecto_Shader01\Debug\PlantillaOpenGL01.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\dev\Assimp\lib\x86 /LIBPATH:C:\dev\opengl\freeglut\lib /LIBPATH:"C:\dev\opengl\glew-1.7.0\lib" glew32.lib freeglut.lib assimp.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\nabil\Desktop\Graficas6\Shader2\PlantillaOpenGL_Proyecto_Shader01\Debug\PlantillaOpenGL01.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\nabil\Desktop\Graficas6\Shader2\PlantillaOpenGL_Proyecto_Shader01\Debug\PlantillaOpenGL01.lib" /MACHINE:X86 Debug\glm.obj
          Debug\glsl.obj
@@ -41,4 +50,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.13
+Time Elapsed 00:00:01.45

@@ -1,3 +1,9 @@
+// Nabil J. Márquez   -  11-10683
+// Marisela del Valle -  11-10267
+// Proyecto VII - Computacion Grafica I
+// Profesor: Eduardo Roa
+// Ultima modificacion:  19/06/16
+
 // Cubica
 
 #include <stdlib.h>
@@ -204,7 +210,7 @@ void Keyboard(unsigned char key, int x, int y)
 		break;
 	case 'X':
 	case 'x':
-		hoff += 1;
+		hoff += 0.1;
 		break;
 	case 'C':
 	case 'c':
@@ -220,6 +226,49 @@ void Keyboard(unsigned char key, int x, int y)
 	case 't':
 		if (f >= 0.05){
 			f -= 0.05;
+		}
+		break;
+
+    case 'y':
+		xc += 0.05;
+		yc += 0.05;
+		break;
+	case 'u':
+		if (xc >= 0.05 && yc >= 0.05){
+			xc -= 0.05;
+			yc -= 0.05;
+		}
+		break;
+	case 'n':
+		sz += 0.001;
+		break;
+	case 'm':
+		if (sz >= 0.001){
+			sz -= 0.001;
+		}
+		break;
+	case 'i':
+		huefreq += 0.05;
+		break;
+	case 'o':
+		if (huefreq >= 0.05){
+			huefreq -= 0.05;
+		}
+		break;
+	case 'f':
+		escape += 12.0;
+		break;
+	case 'g':
+		if (escape >= 12.0){
+			escape -= 12.0;
+		}
+		break;
+	case 'v':
+		maxiter += 12.0;
+		break;
+	case 'b':
+		if (maxiter >= 12.0){
+			maxiter -= 12.0;
 		}
 		break;
 	case '1':
