@@ -29,50 +29,26 @@ cwc::glShaderManager SM;
 cwc::glShader *shader01;
 cwc::glShader *shader02;
 
-GLfloat R, b, hoff, freq, calctype, f;
+//Variables Spirograph Shader
+float calctype = 0.0;
+float R = 10.0;
+float freq = 1.0;
+float hoff = 0.0;
+float f = 1.0;
+float b = 5.0;
+float rv = 5.0;
+float PI = 3.1416;
 
-void ejesCoordenada() {
-	
-	glDisable(GL_LIGHTING);	
-	glLineWidth(2.5);
-	glBegin(GL_LINES);
-		glColor3f(1.0,0.0,0.0);
-		glVertex2f(0,10);
-		glVertex2f(0,-10);
-		glColor3f(0.0,0.0,1.0);
-		glVertex2f(10,0);
-		glVertex2f(-10,0);
-	glEnd();
+//Variables Mandelbrot Shader
+float xc = 0.5;
+float yc = 0.5;
+float sz = 4;
+float escape = 256;
+float maxiter = 20;
+float huefreq = 1.0;
 
-	glLineWidth(1.5);
-	int i;
-	glColor3f(0.0,1.0,0.0);
-	glBegin(GL_LINES);
-		for(i = -10; i <=10; i++){
-			if (i!=0) {		
-				if ((i%2)==0){	
-					glVertex2f(i,0.4);
-					glVertex2f(i,-0.4);
 
-					glVertex2f(0.4,i);
-					glVertex2f(-0.4,i);
-				}else{
-					glVertex2f(i,0.2);
-					glVertex2f(i,-0.2);
 
-					glVertex2f(0.2,i);
-					glVertex2f(-0.2,i);
-
-				}
-			}
-		}
-		
-	glEnd();
-
-	glEnable(GL_LIGHTING);
-
-	glLineWidth(1.0);
-}
 
 void changeViewport(int w, int h) {
 	
@@ -90,6 +66,32 @@ void changeViewport(int w, int h) {
 
 }
 
+void imprimir() {
+	
+	system("cls"); // Para limpiar pantalla
+	printf("%s\n", "SpiroField Parametros");
+	printf("%s\n", "======================");
+	printf("%s%f\n", "_R = ", R);
+	printf("%s%f\n", "_b = ", b);
+	printf("%s%f\n", "_hoff = ", hoff);
+	printf("%s%f\n", "_freq = ", freq);
+	printf("%s%f\n", "_calctype = ", calctype);
+	printf("%s%f\n", "_f = ", f);
+	printf("%s\n\n", "======================");
+
+	printf("%s\n\n", "======================");
+	printf("%s\n", "Mandel Parametros");
+	printf("%s\n", "======================");
+	printf("%s%f\n", "_xc = ", xc);
+	printf("%s%f\n", "_yc = ", yc);
+	printf("%s%f\n", "_huefreq = ", huefreq);
+	printf("%s%f\n", "_sz = ", sz);
+	printf("%s%f\n", "_escape = ", escape);
+	printf("%s%f\n", "_maxiter = ", maxiter);
+	printf("%s\n", "======================");
+
+}
+
 void init(){
 	
    
@@ -100,14 +102,15 @@ void init(){
    shader02 = SM.loadfromFile("spirofield.vert","spirofield.frag"); // load (and compile, link) from file
   		  if (shader02==0) 
 			  std::cout << "Error Loading, compiling or linking shader\n";
-	R = 6.5;
+	/*R = 6.5;
 	b = 5;
 	hoff = 1.9;
 	freq = 0.75;
 	calctype = 1;
-	f = 1;
+	f = 1;*/
 
-
+	system("cls"); // Para limpiar pantalla
+	imprimir();
 
 }
 
@@ -117,9 +120,13 @@ void cargar_shader(int idx) {
 	// Plano Derecho Mandel
 	if (idx == 0){	
 			if (shader01) shader01->begin();
-
-			
-
+			//Colocar aqui los parametros Uniform
+			shader01->setUniform1f("_xc", xc);
+			shader01->setUniform1f("_yc", yc);
+			shader01->setUniform1f("_sz", sz);
+			shader01->setUniform1f("_escape", escape);
+			shader01->setUniform1f("_maxiter", maxiter);
+			shader01->setUniform1f("_huefreq", huefreq);
 	}
 
 	// Plano Izquierdo SpiroField
@@ -132,6 +139,8 @@ void cargar_shader(int idx) {
 			shader02->setUniform1f("_freq",freq);
 			shader02->setUniform1f("_calctype",calctype);
 			shader02->setUniform1f("_f",f);
+			shader02->setUniform1f("_rv", rv);
+			shader02->setUniform1f("_PI", PI);
 	}
 
 
@@ -153,6 +162,7 @@ void fin_shader(int idx) {
 
 }
 
+
 void Keyboard(unsigned char key, int x, int y)
 {
 
@@ -163,42 +173,138 @@ void Keyboard(unsigned char key, int x, int y)
 	case 'Q':
 	case 'q':
 		calctype = 0;
+		break;
 	case 'A':
 	case 'a':
 		calctype = 1;
+		break;
 	case 'Z':
 	case 'z':
 		calctype = 2;
+		break;
 	case 'W':
 	case 'w':
 		R += 1;
+		break;
 	case 'E':
 	case 'e':
-		R -= 1;
+		if (R >= 1.0){
+			R -= 1.0;
+		}
+		break;
 	case 'S':
 	case 's':
 		freq += 0.05;
+		break;
 	case 'D':
 	case 'd':
-		freq -= 0.05;
+		if (freq >= 0.05){
+			freq -= 0.05;
+		}
+		break;
 	case 'X':
 	case 'x':
 		hoff += 1;
+		break;
 	case 'C':
 	case 'c':
-		hoff -= 1;
+		if (hoff >= 0.1){
+			hoff -= 0.1;
+		}
+		break;
 	case 'R':
 	case 'r':
 		f += 0.05;
+		break;
 	case 'T':
 	case 't':
-		f -= 0.05;
-
-
+		if (f >= 0.05){
+			f -= 0.05;
+		}
+		break;
+	case '1':
+		R = 6.5;
+		hoff = 1.9;
+		freq = 0.75;
+		calctype = 1.0;
+		f = 1.0;
+		xc = 0.5;
+		yc = 0.5;
+		huefreq = 1.0;
+		sz = 4;
+		escape = 256;
+		maxiter = 20;
+		break;
+	case '2':
+		R = 13.0;
+		hoff = 1.05;
+		freq = 0.8;
+		calctype = 1.0;
+		f = 0.5;
+		xc = 0.5;
+		yc = 0.5;
+		huefreq = 1.0;
+		sz = 4;
+		escape = 256;
+		maxiter = 20;
+		break;
+	case '3':
+		R = 2.0;
+		hoff = 0.0;
+		freq = 0.25;
+		calctype = 0.0;
+		f = 1.0;
+		xc = 0.5;
+		yc = 0.5;
+		huefreq = 1.0;
+		sz = 4;
+		escape = 256;
+		maxiter = 20;
+		break;
+	case '4':
+		R = 11.0;
+		hoff = 0.8;
+		freq = 0.55;
+		calctype = 2.0;
+		f = 1.0;
+		xc = 0.5;
+		yc = 0.5;
+		huefreq = 1.0;
+		sz = 4;
+		escape = 256;
+		maxiter = 20;
+		break;
+	case '5':
+		R = 11.0;
+		hoff = 0.8;
+		freq = 0.55;
+		calctype = 2.0;
+		f = 1.0;
+		xc = 0.39;
+		yc = 0.25;
+		huefreq = 0.36;
+		sz = 0.05;
+		escape = 512;
+		maxiter = 120;
+		break;
+	case '6':
+		R = 11.0;
+		hoff = 0.8;
+		freq = 0.55;
+		calctype = 2.0;
+		f = 1.0;
+		xc = 0.39;
+		yc = 0.27;
+		huefreq = 2.4;
+		sz = 0.01;
+		escape = 512;
+		maxiter = 256;
+		break;
 	default:
 		break;
   }
   scene_list = 0;
+  imprimir();
   glutPostRedisplay();
 }
 
